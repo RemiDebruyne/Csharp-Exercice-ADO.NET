@@ -80,7 +80,7 @@ using (SqlConnection conn = new SqlConnection(connectionString))
 
         while (reader.Read())
         {
-            Console.WriteLine($" id: {reader.GetInt32(0)}, prenom: {reader.GetString(1)}, nom: , nuùero_de_classe: {reader.GetInt32(2)}, mail: {reader.GetString(3)}");
+            Console.WriteLine($" id: {reader.GetInt32(0)}, prenom: {reader.GetString(1)}, nom: , numero_de_classe: {reader.GetInt32(2)}, mail: {reader.GetString(3)}");
         }
     } catch(Exception e)
     {
