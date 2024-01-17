@@ -14,7 +14,7 @@ namespace ExerciceCommande.DAO
         public abstract T? GetOneById(int id);
         public abstract T Save(T element);
         public abstract T Update(T element);
-        public abstract T Delte(T element);
-        public abstract T Add(T element);
+        public abstract T Delete(T element);
+        public abstract T AddCommande(T element);
     }
 }

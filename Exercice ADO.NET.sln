@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo01", "Demo01\Demo01.csproj", "{BECACC3A-B3DE-4A97-8156-6CA70C06E0B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceAdo", "ExerciceAdo\ExerciceAdo.csproj", "{33C5CD96-E221-4845-A662-D01460309B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciceAdo", "ExerciceAdo\ExerciceAdo.csproj", "{33C5CD96-E221-4845-A662-D01460309B7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceCommande", "ExerciceCommande\ExerciceCommande.csproj", "{C7042B0B-181A-4AE9-89A5-F18EA24C7306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{33C5CD96-E221-4845-A662-D01460309B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C5CD96-E221-4845-A662-D01460309B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C5CD96-E221-4845-A662-D01460309B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7042B0B-181A-4AE9-89A5-F18EA24C7306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7042B0B-181A-4AE9-89A5-F18EA24C7306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7042B0B-181A-4AE9-89A5-F18EA24C7306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7042B0B-181A-4AE9-89A5-F18EA24C7306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
