@@ -78,32 +78,32 @@ namespace ExerciceCommande.DAO
             }
         }
 
-        public override Client Save(Client client)
-        {
-            request = "INSERT INTO clients (prenom, nom, adresse, cp, ville, telephone) OUTPUT INSERTED.ID VALUES( @prenom, @nom, @adresse, @cp, @ville, @telephone)";
+        //public override Client Save(Client client)
+        //{
+        //    request = "INSERT INTO clients (prenom, nom, adresse, cp, ville, telephone) OUTPUT INSERTED.ID VALUES( @prenom, @nom, @adresse, @cp, @ville, @telephone)";
 
-            using SqlConnection connection = DataConnection.GetConnection;
+        //    using SqlConnection connection = DataConnection.GetConnection;
 
-            using SqlCommand command = new(request, connection);
+        //    using SqlCommand command = new(request, connection);
 
-            command.Parameters.AddWithValue("@prenom", client.Prenom);
-            command.Parameters.AddWithValue("@nom", client.Nom);
-            command.Parameters.AddWithValue("@adresse", client.Adresse);
-            command.Parameters.AddWithValue("@cp", client.CodePostal);
-            command.Parameters.AddWithValue("@ville", client.Ville);
-            command.Parameters.AddWithValue("@telephone", client.Telephone);
+        //    command.Parameters.AddWithValue("@prenom", client.Prenom);
+        //    command.Parameters.AddWithValue("@nom", client.Nom);
+        //    command.Parameters.AddWithValue("@adresse", client.Adresse);
+        //    command.Parameters.AddWithValue("@cp", client.CodePostal);
+        //    command.Parameters.AddWithValue("@ville", client.Ville);
+        //    command.Parameters.AddWithValue("@telephone", client.Telephone);
 
-            connection.Open();
+        //    connection.Open();
 
-            client.Id = (int)command.ExecuteScalar();
+        //    client.Id = (int)command.ExecuteScalar();
 
-            client.Commandes.ForEach(commande =>
-            {
-                CommandeDAO commandeDAO = new CommandeDAO();
-                commande.Client = client;
-            });
+        //    client.Commandes.ForEach(commande =>
+        //    {
+        //        CommandeDAO commandeDAO = new CommandeDAO();
+        //        commande.Client = client;
+        //    });
 
-        }
+        //}
 
         public override Client Update(Client element)
         {
