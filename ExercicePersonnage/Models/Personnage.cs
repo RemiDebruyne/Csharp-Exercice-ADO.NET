@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ExercicePersonnage.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace ExercicePersonnage.Models
@@ -18,5 +21,41 @@ namespace ExercicePersonnage.Models
 
 
 
+
+        public Personnage GetPersonnageByPseudo(string pseudo)
+        {
+            using var context = new PersonnageContext();
+
+            Personnage personnage = context.Personnages.Where(p => p.Pseudo == pseudo).FirstOrDefault();
+
+            return personnage;
+        }
+
+        public void GetAllPersonnages()
+        {
+            using var context = new PersonnageContext();
+
+            context.Personnages.ToList().ForEach(personnage => Console.WriteLine(personnage));
+        }
+        public Personnage UpdatePersonnage(Personnage personnage, string newValue)
+        {
+            using var context = new PersonnageContext();
+
+            personnage.Pseudo = newValue;
+
+            context.SaveChanges();
+
+            return personnage;
+
+        }
+
+        public override string ToString()
+        {
+            return @$"Pseudo: {Pseudo}
+PV: {Pv}
+Armure: {Armure}
+Kill: {Kill}
+Date de création: {CreationDate}";
+        }
     }
 }

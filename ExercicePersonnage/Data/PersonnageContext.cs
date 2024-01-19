@@ -20,6 +20,7 @@ namespace ExercicePersonnage.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\exerciceDB02; Database=exercicePersonnage;");
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\exerciceDB; Database=exercicePersonnage;");
         }
     }
 }
