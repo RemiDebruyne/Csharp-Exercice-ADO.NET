@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciceCommande", "Exercic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicePersonnage", "ExercicePersonnage\ExercicePersonnage.csproj", "{998DBB8F-662F-4489-B3A2-B5841B09261D}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceHotel", "ExerciceHotel\ExerciceHotel.csproj", "{219ACB87-C097-46E6-9DD4-A867D93C18DB}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceHotel", "ExerciceHotel\ExerciceHotel.csproj", "{EE4CFC89-7037-48AA-8963-AB1D98D02E96}"
+>>>>>>> cfb5d691bac389cc282fec6bddcd2cff75e2a026
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +39,17 @@ Global
 		{998DBB8F-662F-4489-B3A2-B5841B09261D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{998DBB8F-662F-4489-B3A2-B5841B09261D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{998DBB8F-662F-4489-B3A2-B5841B09261D}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{219ACB87-C097-46E6-9DD4-A867D93C18DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{219ACB87-C097-46E6-9DD4-A867D93C18DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{219ACB87-C097-46E6-9DD4-A867D93C18DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{219ACB87-C097-46E6-9DD4-A867D93C18DB}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{EE4CFC89-7037-48AA-8963-AB1D98D02E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4CFC89-7037-48AA-8963-AB1D98D02E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4CFC89-7037-48AA-8963-AB1D98D02E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4CFC89-7037-48AA-8963-AB1D98D02E96}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> cfb5d691bac389cc282fec6bddcd2cff75e2a026
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
