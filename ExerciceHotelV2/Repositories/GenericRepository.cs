@@ -12,60 +12,58 @@ namespace ExerciceHotelV2.Repositories
     internal class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private HotelContext _context;
-        private DbSet<T> _table;
+        private DbSet<T> _reppository;
 
         public HotelContext Context { get; set; }
-        public DbSet<T>? Table { get; set; }
+        public DbSet<T>? Repository { get; set; }
         public GenericRepository()
         {
             _context = new HotelContext();
-            Table = _context.Set<T>();
+            Repository = _context.Set<T>();
         }
 
         public void Delete(T entity)
         {
-            T existing = Table.Find(entity);
-            Table.Remove(existing);
+            T existing = Repository.Find(entity);
+            Repository.Remove(existing);
+            _context.SaveChanges();
+
         }
 
         public List<T> GetAll()
         {
-            return Table.ToList();
+            return Repository.ToList();
         }
 
         public T? GetOneById(T entity)
         {
-            return Table.Find(entity);
+            return Repository.Find(entity);
         }
 
-        public List<T> GetOneBySpecification(Func<T, bool> predicate)
+        public T? Get(Expression<Func<T, bool>> predicate)
         {
-            return Table.Where(predicate).ToList();
+            return Repository.Where(predicate).FirstOrDefault();
         }
 
-        public void Save(T entity)
-        {
-            _context.SaveChanges();
-        }
+
 
         public void Update(T entity)
         {
-            Table.Update(entity);
+
+            Repository.Update(entity);
+            _context.SaveChanges();
+
         }
 
         public List<T> GetAll(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<T> Get(Expression<Func<T, bool>> predicate)
-        {
-            throw new NotImplementedException();
+            return Repository.Where(predicate).ToList();
         }
 
         public void Add(T entity)
         {
-            Table.Add(entity);
+            Repository.Add(entity);
+            _context.SaveChanges();
         }
     }
 }
